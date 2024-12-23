@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        label {
+            width: 150px;
+            display: inline-block;
+        }
+
+        .full-width {
+            width: 100%;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Contact Us Page</h1>
+        <h3>Please fill your pesonal details in the below form :</h3>
+        <fieldset>
+            <form>
+                <label for="fname">First Name:<sup><b>*</b></sup> </label>
+                <input id="fname" type="text" name="First Name" placeholder="Enter your first name"
+                    title="Please enter first Name" value="" required><br />
+                <br />
+                <label for="lname">Last Name:<sup><b>*</b></sup> </label>
+                <input id="lname" type="text" name="Last Name" placeholder="Enter your last name"
+                    title="Please enter last name" value="" required><br />
+                <br />
+                <label for="gender">Gender:<sup><b>*</b></sup> </label>
+                <input id="male" type="radio" name="gender" value="Male"><label for="male">Male</label><input
+                    id="female" type="radio" name="gender" value="Female"><label for="female">Female</label><br />
+                <br />
+                <label for="age">Age:<sup><b>*</b></sup> </label>
+                <input id="age" type="number" name="number" title="Please enter your age" value="" min="18"
+                    max="60" required><br />
+                <br />
+                <label for="dob">Date of Birth:<sup><b>*</b></sup> </label>
+                <input id="dob" type="date" name="dob" min="2000-01-01" max="2023-12-31" value="" required><br />
+                <br />
+                <label for="color">Favourite Color: </label>
+                <input id="color" type="color" name="color" placeholder="Select your favourite color" title=""
+                    value=""><br />
+                <br />
+                <label for="email">Email id:<sup><b>*</b></sup> </label>
+                <input id="email" type="email" name="Email id" placeholder="Enter your mail id" value="" required><br />
+                <br />
+                <label for="password">Password:<sup><b>*</b></sup> </label>
+                <input id="password" type="password" name="Password" value="" minlength="8" maxlength="10"
+                    pattern="[A-Za-z0-9]+" required><br />
+                <br />
+                <label for="phone">Phone Number: </label>
+                <input id="phone" type="tel" name="phone" value="" pattern="[0-9]+" maxlength="10"><br />
+                <br />
+                <label for="country">Country:<sup><b>*</b></sup> </label>
+                <select id="country" name="country" required>
+                    <option value="select">--Select--</option>
+                    <option value="India">India</option>
+                    <option value="Us">Us</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <br />
+                <br />
+                <label for="resume">Resume:<sup><b>*</b></sup> </label>
+                <input id="resume" name="resume" type="file" required>
+                <p><small>Please upload your resume above</small></p>
+                <input id="checkbox1" type="checkbox" name="checkbox1" value="" required>
+                <label for="checkbox1" class="full-width">I hereby declare that all the details provided above are true.</label>
+                <br />
+                <br />
+                <label for="address">Address: </label><br/>
+                <textarea id="address" name="address" placeholder="Address goes here" rows="8" cols="20"></textarea>
+                <br/>
+                <input type="submit" value="Submit"> <input type="reset" value="Reset">
+            </form>
+        </fieldset>
+    </main>
+    <footer>
+        &copy; Copyright 2024
+    </footer>
+</body>
+
+</html>
