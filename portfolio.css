@@ -65,7 +65,7 @@ nav ul li {
     list-style: none;
 }
 
-nav ul li a {
+a {
     display: inline-block;
     color: #ff6347;
     text-decoration: none;
@@ -80,34 +80,29 @@ nav ul li a:hover {
     margin: 20px 15px;
 }
 
-.projects-wrap {
-    display: flex;
-    padding: 10px 0;
-    gap: 30px;
-    flex-direction: column;
-
-    @media(min-width: 992px) {
-        flex-direction: row;
-    }
+.practice-projects {
+    margin-top: 50px;
 }
 
-#projects article {
-    width: 100%;
+#projects h3 {
+    padding-bottom: 15px;
+}
 
-    @media(min-width: 992px) {
-        max-width: 50%;
-    }
+#projects article .content {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #projects article img {
     width: 100%;
     max-width: 300px;
+    margin: 0 auto;
 }
 
 .content {
     display: flex;
     gap: 30px;
-    padding-top: 15px;
+    padding: 50px 15px;
     flex-direction: column;
 
     @media(min-width: 992px) {
@@ -165,4 +160,59 @@ footer p {
 
 #about {
     padding-top: 20px;
+}
+
+.projects-link, .projects-link:hover {
+    text-decoration: none;
+    padding: 0;
+}
+
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+}
+
+.skills-wrap span, a.visit {
+    width: 75px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffb3b3;
+    color: #333;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.skills-wrap span:hover, a.visit:hover {
+    background-color: #ff9999;
+    color: #fff;
+}
+
+.achievements-section ul li {
+    padding: 0 0 10px;
+}
+
+.about-me p {
+    padding: 10px 0;
+}
+
+p.info {
+    padding: 0 0 20px;
+}
+
+a.visit {
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+        display: block;
+        margin: 20px 0 0;
+    }
 }

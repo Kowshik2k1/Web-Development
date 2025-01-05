@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="./portfolio.css" />
     <style>
         label {
             width: 150px;
@@ -19,13 +20,13 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Contact Us Page</h1>
         <h3>Please fill your pesonal details in the below form :</h3>
@@ -33,7 +34,7 @@
             <form>
                 <label for="fname">First Name:<sup><b>*</b></sup> </label>
                 <input id="fname" type="text" name="First Name" placeholder="Enter your first name"
-                    title="Please enter first Name" value="" required><br />
+                    title="Please enter first Name" pattern="[A-Za-z]+" value="" required><br />
                 <br />
                 <label for="lname">Last Name:<sup><b>*</b></sup> </label>
                 <input id="lname" type="text" name="Last Name" placeholder="Enter your last name"
@@ -88,7 +89,7 @@
         </fieldset>
     </main>
     <footer>
-        &copy; Copyright 2024
+        <p>&copy; 2025 My Portfolio Website</p>
     </footer>
 </body>
 
