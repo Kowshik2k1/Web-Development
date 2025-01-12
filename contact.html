@@ -16,6 +16,36 @@
             width: 100%;
             display: inline;
         }
+
+        h1,
+        h2,
+        h3 {
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 50px 15px;
+        }
+
+        .form {
+            padding: 30px 0;
+        }
+
+        form {
+            padding-top: 20px;
+        }
+
+        legend {
+            font-weight: 700;
+        }
+
+        input {
+            margin: 10px 0;
+        }
+
+        label {
+            padding: 5px 0;
+        }
     </style>
 </head>
 
@@ -29,64 +59,100 @@
     </header>
     <main>
         <h1>Contact Us Page</h1>
-        <h3>Please fill your pesonal details in the below form :</h3>
-        <fieldset>
-            <form>
-                <label for="fname">First Name:<sup><b>*</b></sup> </label>
-                <input id="fname" type="text" name="First Name" placeholder="Enter your first name"
-                    title="Please enter first Name" pattern="[A-Za-z]+" value="" required><br />
-                <br />
-                <label for="lname">Last Name:<sup><b>*</b></sup> </label>
-                <input id="lname" type="text" name="Last Name" placeholder="Enter your last name"
-                    title="Please enter last name" value="" required><br />
-                <br />
-                <label for="gender">Gender:<sup><b>*</b></sup> </label>
-                <input id="male" type="radio" name="gender" value="Male"><label for="male">Male</label><input
-                    id="female" type="radio" name="gender" value="Female"><label for="female">Female</label><br />
-                <br />
-                <label for="age">Age:<sup><b>*</b></sup> </label>
-                <input id="age" type="number" name="number" title="Please enter your age" value="" min="18"
-                    max="60" required><br />
-                <br />
-                <label for="dob">Date of Birth:<sup><b>*</b></sup> </label>
-                <input id="dob" type="date" name="dob" min="2000-01-01" max="2023-12-31" value="" required><br />
-                <br />
-                <label for="color">Favourite Color: </label>
-                <input id="color" type="color" name="color" placeholder="Select your favourite color" title=""
-                    value=""><br />
-                <br />
-                <label for="email">Email id:<sup><b>*</b></sup> </label>
-                <input id="email" type="email" name="Email id" placeholder="Enter your mail id" value="" required><br />
-                <br />
-                <label for="password">Password:<sup><b>*</b></sup> </label>
-                <input id="password" type="password" name="Password" value="" minlength="8" maxlength="10"
+        <div class="form" id="login-form">
+            <h2>Question-1</h2>
+            <h3>Login Form</h3>
+            <fieldset>
+                <legend>Sign Up Form</legend>
+                <form action="submit.html" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your Full Name" name="username" required><br />
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="10"
                     pattern="[A-Za-z0-9]+" required><br />
-                <br />
-                <label for="phone">Phone Number: </label>
-                <input id="phone" type="tel" name="phone" value="" pattern="[0-9]+" maxlength="10"><br />
-                <br />
-                <label for="country">Country:<sup><b>*</b></sup> </label>
-                <select id="country" name="country" required>
-                    <option value="select">--Select--</option>
-                    <option value="India">India</option>
-                    <option value="Us">Us</option>
-                    <option value="Australia">Australia</option>
-                </select>
-                <br />
-                <br />
-                <label for="resume">Resume:<sup><b>*</b></sup> </label>
-                <input id="resume" name="resume" type="file" required>
-                <p><small>Please upload your resume above</small></p>
-                <input id="checkbox1" type="checkbox" name="checkbox1" value="" required>
-                <label for="checkbox1" class="full-width">I hereby declare that all the details provided above are true.</label>
-                <br />
-                <br />
-                <label for="address">Address: </label><br/>
-                <textarea id="address" name="address" placeholder="Address goes here" rows="8" cols="20"></textarea>
-                <br/>
-                <input type="submit" value="Submit"> <input type="reset" value="Reset">
-            </form>
-        </fieldset>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+        </div>
+        <div class="form" id="registration-form">
+            <h2>Question-2</h2>
+            <h3>Registration Form</h3>
+            <fieldset>
+                <legend>Registration Form</legend>
+                <form action="submit.html" method="POST">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required><br />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required><br />
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="10"
+                    pattern="[A-Za-z0-9]+" required><br />
+
+                    <label>Gender:</label><br />
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br />
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br />
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br />
+
+                    <label>Hobbies:</label><br />
+                    <input type="checkbox" id="playing-cricket" name="hobbies" value="Playing Cricket">
+                    <label for="playing-cricket">Playing Cricket</label><br />
+                    <input type="checkbox" id="watching-movies" name="hobbies" value="Watching Movies">
+                    <label for="watching-movies">Watching Movies</label><br />
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                    </select><br />
+
+                    <label for="profile_picture">Profile Picture:</label>
+                    <input type="file" id="profile_picture" name="profile_picture" accept="image/*"><br />
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </fieldset>
+        </div>
+        <div class="form" id="login-form">
+            <h2>Question-3</h2>
+            <h3>Feedback Form</h3>
+            <fieldset>
+                <legend>Feedback Form</legend>
+                <form action="submit.html" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" pattern="[A-Za-z]+" required>
+                    <br><br>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <br><br>
+            
+                    <label for="rating">Rating (1-5):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br><br>
+            
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Comments starts from here" rows="4" required></textarea>
+                    <br><br>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 My Portfolio Website</p>
