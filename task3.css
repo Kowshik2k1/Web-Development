@@ -1,0 +1,14 @@
+  
+/* Style for the box-modal */
+.box-modal {
+    margin: 40px; /* Space outside the box */
+    padding: 20px; /* Space inside the box, around the text */
+    border: 5px solid blue; /* Blue border around the box */
+    background-color: yellow; /* Background color of the box */
+    width: 300px;
+}
+
+body {
+    background-color: red;
+}
+  
