@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2 Solution</title>
+    <link rel="stylesheet" href="./question-2.css" />
+    <style>
+        .bg-secondary {
+            background: #6c757d;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .bg-secondary > * {
+            color: #fff;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="p-3 bg-secondary text-white">
+            <h1>Task-2</h1>
+            <h2>Use only HTML and CSS (no frameworks) to build a responsive portfolio website with the following
+                sections:</h2>
+            <ol>
+                <li>Header with a title and navigation.</li>
+                <li>About section with text and an image.</li>
+                <li>Projects section displaying at least three projects in a responsive grid layout.</li>
+                <li>Contact form section.</li>
+
+            </ol>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrap" id="about">
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    <b>Hi, I'm <em>Kowshik Varma Balaraju</em></b>
+                </p>
+                <p class="info">
+                    I'm a Full Stack Developer with experience in building web applications using the MERN stack
+                    (<i>MongoDB, Express, React, Node.js</i>). I love solving problems and creating websites that are
+                    both functional and easy to use. I'm always learning new technologies to improve my skills and build
+                    better projects. Feel free to check out my work in <a href="#projects" class="projects-link">My
+                        Projects section</a>
+                </p>
+            </div>
+            <div class="my-skills" id="skills">
+                <h2>Front End Skills</h2>
+                <div class="skills-wrap">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>SCSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                </div>
+            </div>
+        </div>
+        <div class="achievements-section wrap">
+            <h2>My Achievements</h2>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, iusto.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum impedit cumque sint aut
+                    eligendi! Provident hic recusandae officiis eum ducimus?</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+        </div>
+        <div class="wrap" id="projects">
+            <h2>Projects</h2>
+            <section class="projects-wrap">
+                <article class="projects">
+                    <h3>Projects</h3>
+                    <div class="content">
+                        <img src="../Images/mini-project.jpg" alt="Mini Project" width="" height="" />
+                        <div>
+                            <h4>Project Description</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere, reiciendis
+                                minus, vel explicabo dicta quis ipsum laborum officiis sint aut, veniam quo deleniti.
+                                Est voluptate voluptatibus accusamus quibusdam amet?</p>
+                            <a href="../question1/question-1.html" class="visit">Visit Site</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="practice-projects">
+                    <h3>Mini Projects</h3>
+                    <div class="content">
+                        <img src="../Images/mini-project.jpg" alt="Mini Project" width="" height="" />
+                        <div>
+                            <h4>Project Description</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere, reiciendis
+                                minus, vel explicabo dicta quis ipsum laborum officiis sint aut, veniam quo deleniti.
+                                Est voluptate voluptatibus accusamus quibusdam amet?</p>
+                            <a href="../question3/question-3.html" class="visit">Visit Site</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <div class="wrap" id="contact-me">
+            <h2>Contact Me</h2>
+            <form>
+                <input id="name" type="text" name="Name" placeholder="Your name" title="Please enter your name"
+                    value=""><br />
+                <input id="email" type="email" name="Email id" placeholder="Enter your email" value=""><br />
+                <textarea id="message" name="message" placeholder="Your Message" rows="8" cols="20"></textarea>
+                <br />
+                <input type="submit" class="submit" value="Send Message">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Portfolio Website</p>
+    </footer>
+</body>
+
+</html>

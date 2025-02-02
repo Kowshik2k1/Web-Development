@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .hero {
+            background-image: url(/assignment-5/images/hero-bg.jpg);
+            /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .content-section {
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="p-3 bg-secondary text-white">
+            <h1>Task-1</h1>
+            <h2>Create a simple responsive webpage that includes the following:</h2>
+            <ol>
+                <li>A navigation bar that collapses into a hamburger menu on smaller screens.</li>
+                <li>A hero section with an image and text that scales gracefully across devices.</li>
+                <li>Three content sections displayed side-by-side on large screens but stacked vertically on smaller
+                    screens.</li>
+            </ol>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <a class="navbar-brand" href="#">My Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/assignment-5/question2/question-2.html" class="nav-link text-decoration-none">
+                            Task 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/assignment-5/question3/question-3.html" class="nav-link text-decoration-none">
+                            Task 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/assignment-5/question4/question-4.html" class="nav-link text-decoration-none">
+                            Task 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/assignment-5/question5/question-5.html" class="nav-link text-decoration-none">
+                            Task 5</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section starts here -->
+        <section class="hero">
+            <div class="container-fluid">
+                <h3>Bootstrap has been included in this page</h3>
+                <p>This page is responsive in all available devices</p>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="content-section">
+                        <h3>Card Component</h3>
+                        <a href="https://getbootstrap.com/docs/5.0/components/card/" class="text-decoration-none"
+                            target="_blank">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="content-section">
+                        <h3>Accordion Component</h3>
+                        <a href="https://getbootstrap.com/docs/5.0/components/accordion/" class="text-decoration-none"
+                            target="_blank">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="content-section">
+                        <h3>Modal Component</h3>
+                        <a href="https://getbootstrap.com/docs/5.0/components/modal/" class="text-decoration-none"
+                            target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
