@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1 Question-1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <!-- Question 1 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">Current Date: <span id="current-date"></span></h1>
+            <button id="format1" type="button" class="btn btn-secondary">mm-dd-yyyy</button>
+            <button id="format2" type="button" class="btn btn-secondary">mm/dd/yyyy</button>
+            <button id="format3" type="button" class="btn btn-secondary">dd-mm-yyyy</button>
+            <button id="format4" type="button" class="btn btn-secondary">dd/mm/yyyy</button>
+            <button id="reset" type="reset" class="btn btn-primary">Clear Date</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">Calculator</h1>
+            <label for="num1" class="pe-5 mb-3">First Number: </label>
+            <input id="num1" type="number" /><br />
+            <label for="num2" class="pe-4">Second Number: </label>
+            <input id="num2" class="mb-3" type="number" /><br />
+            <button type="button" class="btn btn-secondary" id="multiply">Multiply</button>
+            <button type="button" class="btn btn-secondary" id="divide">Divide</button><br />
+            <h5 class="mt-4 d-inline-block">The Result is: <span id="result" style="background-color: yellow;"
+                    class="d-inline"></span></h5>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">Compare and Return </h1>
+            <label for="number1" class="pe-5 mb-3">First Number: </label>
+            <input id="number1" type="number" /><br />
+            <label for="number2" class="pe-4">Second Number: </label>
+            <input id="number2" class="mb-3" type="number" /><br />
+            <button type="button" class="btn btn-secondary" id="compare">Compare</button><br />
+            <h5 class="mt-4 d-inline-block">The Result is: <span id="result1" style="background-color: yellow;"
+                    class="d-inline"></span></h5>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">String manipulation </h1>
+            <label for="string1" class="pe-5 mb-3">First String: </label>
+            <input id="string1" type="text" minlength="2" /><br />
+            <label for="string2" class="pe-4">Second String: </label>
+            <input id="string2" class="mb-3" type="text" minlength="2" /><br />
+            <button type="button" class="btn btn-secondary" id="concat">Concat</button><br />
+            <h5 class="mt-4 d-inline-block">The Result String is: <span id="result2" style="background-color: yellow;"
+                    class="d-inline"></span></h5>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">Closest number to 100 </h1>
+            <label for="int1" class="pe-5 mb-3">First Number: </label>
+            <input id="int1" type="number" /><br />
+            <label for="int2" class="pe-4">Second Number: </label>
+            <input id="int2" class="mb-3" type="number" /><br />
+            <button type="button" class="btn btn-secondary" id="find">Find Result</button><br />
+            <h5 class="mt-4 d-inline-block">The Result is: <span id="result3" style="background-color: yellow;"
+                    class="d-inline"></span></h5>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="px-2 py-5 mx-2 mb-5 shadow">
+            <h1 class="pb-3">Largest number in given 3 numbers </h1>
+            <label for="input1" class="pe-5 mb-3">First Number: </label>
+            <input id="input1" type="number" /><br />
+            <label for="input2" class="pe-4">Second Number: </label>
+            <input id="input2" class="mb-3" type="number" /><br />
+            <label for="input3" class="pe-4">Third Number: </label>
+            <input id="input3" class="mb-3" type="number" /><br />
+            <button type="button" class="btn btn-secondary" id="largest">Find Largest</button><br />
+            <h5 class="mt-4 d-inline-block">The Largest Number is: <span id="result4" style="background-color: yellow;"
+                    class="d-inline"></span></h5>
+        </div>
+
+    </main>
+    <script>
+        const date = new Date();
+        // Getting Element by id for Date
+        const container = document.getElementById("current-date");
+        const format1 = document.getElementById("format1");
+        const format2 = document.getElementById("format2");
+        const format3 = document.getElementById("format3");
+        const format4 = document.getElementById("format4");
+        const reset = document.getElementById("reset");
+
+        // Getting the current day, month and year
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+
+        // Adding Event Listeners for Date
+        format1.addEventListener("click", () => container.innerHTML = (`${month}-${day}-${year}`));
+        format2.addEventListener("click", () => container.innerHTML = (`${month}/${day}/${year}`));
+        format3.addEventListener("click", () => container.innerHTML = (`${day}-${month}-${year}`));
+        format4.addEventListener("click", () => container.innerHTML = (`${day}/${month}/${year}`));
+
+        // Clearing the date
+        reset.addEventListener("click", () => container.innerHTML = "");
+
+
+        // Getting Element by id for Calculator
+        const input1 = document.getElementById("num1");
+        const input2 = document.getElementById("num2");
+        const result = document.getElementById("result");
+        const multiply = document.getElementById("multiply");
+        const divide = document.getElementById("divide");
+
+        // Adding Event Listeners for Calculator
+        multiply.addEventListener("click", () => result.innerHTML = input1.value * input2.value);
+        divide.addEventListener("click", () => result.innerHTML = input1.value / input2.value);
+
+        // Getting Element by id for Calculator
+        const num1 = document.getElementById("number1");
+        const num2 = document.getElementById("number2");
+        const compare = document.getElementById("compare");
+        const result1 = document.getElementById("result1");
+
+        // Function to compare two numbers
+        compare.addEventListener("click", () => {
+            const num1Value = parseInt(num1.value);
+            const num2Value = parseInt(num2.value);
+
+            if (num1Value === 50 || num2Value === 50) {
+                result1.innerHTML = "true";
+            } else if ((num1Value + num2Value) === 50) {
+                result1.innerHTML = "true";
+            } else {
+                result1.innerHTML = "false";
+            }
+        });
+
+        // Getting Element by id for String Manipulation
+        const string1 = document.getElementById("string1");
+        const string2 = document.getElementById("string2");
+        const concat = document.getElementById("concat");
+        const result2 = document.getElementById("result2");
+
+        // Logic for String Manipulation
+        concat.addEventListener("click", () => {
+            if (string1.value.length >= 2 && string2.value.length >= 2) {
+                result2.innerHTML = string1.value.slice(1) + string2.value.slice(1);
+            } else {
+                result2.innerHTML = "Input string values must be greter than 2 letter"
+            }
+        });
+
+        // Getting Element by id for finding closest number to 100
+        const int1 = document.getElementById("int1");
+        const int2 = document.getElementById("int2");
+        const find = document.getElementById("find");
+        const result3 = document.getElementById("result3");
+
+        // Logic to find closest number to 100
+        find.addEventListener("click", () => {
+            const num1 = parseInt(int1.value);
+            const num2 = parseInt(int2.value);
+
+            const diff1 = Math.abs(100 - num1);
+            const diff2 = Math.abs(100 - num2);
+
+            if (diff1 < diff2) {
+                result3.innerHTML = `${num1} is nearest to 100`;
+            } else if (diff2 < diff1) {
+                result3.innerHTML = `${num2} is nearest to 100`;
+            } else {
+                result3.innerHTML = "(False) Both numbers are equally close to 100";
+            }
+        });
+
+        // Getting Element by id for finding closest number to 100
+        const intput1 = document.getElementById("input1");
+        const intput2 = document.getElementById("input2");
+        const intput3 = document.getElementById("input3");
+        const largest = document.getElementById("largest");
+        const result4 = document.getElementById("result4");
+
+        // Logic to find largest among three
+        largest.addEventListener("click", () => {
+            const num1 = parseInt(intput1.value);
+            const num2 = parseInt(intput2.value);
+            const num3 = parseInt(intput3.value);
+
+            if(num1 > num2) {
+                if(num1 > num3) {
+                    result4.innerHTML = num1;
+                } else {
+                    result4.innerHTML = num3;
+                }
+            } else {
+                result4.innerHTML = num2;
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript </title>
+</head>
+
+<body>
+    <form id="form1">
+        <label for="password">Enter Your Password: </label>
+        <input type="password" id="password" />
+        <input type="submit" />
+    </form>
+    <script>
+        // Qustion 1        
+        const add = (a, b) => {
+            return a + b;
+        }
+
+        console.log(add(2, 4));
+
+        // Question 2
+        const square = (x) => {
+            return x * x;
+        }
+
+        console.log(square(2));
+
+        // Question 3
+        const arr1 = [4, 7, 9, 10];
+        const arr2 = arr1.map(num => num * num);
+        console.log(arr2);
+
+        // Question 4
+        const persons = [
+            {name: "Kowshik", age: "24"},
+            {name: "Raju", age: "32"},
+            {name: "Sumanth", age: "35"},
+            {name: "Rohith", age: "29"}
+        ]
+
+        const filteredPersons = persons
+        .filter(person => person.age > 30)
+        .reduce((sum, person) => sum + Number(person.age), 0);
+
+        console.log(filteredPersons);
+
+        const pass = document.getElementById("password");
+        const form = document.getElementById("form1");
+
+        form.addEventListener("submit", function(e) {
+            e.preventdefault();
+        })
+
+        pass.addEventListener("onchange", function(e) {
+            e.preventdefault();
+        })
+    </script>
+
+</body>
+
+</html>

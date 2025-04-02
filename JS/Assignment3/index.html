@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            background: red;
+        }
+
+        .normal {
+            color: white;
+            background: black;
+            max-width: 200px;
+            padding: 30px;
+        }
+
+        .active {
+            color: blue;
+            background: yellow;
+        }
+
+        #myForm {
+            padding: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Question 1: Update inner content -->
+    <h1 id="header">Hello</h1>
+
+    <!-- Question 2: Add new p-element inside div -->
+    <div class="content"></div>
+
+    <!-- Question 3: Change element style -->
+    <div class="box"></div>
+
+    <!-- Question 4: Handle btn click -->
+    <button id="myButton">Click Me!</button>
+    <h2 id="result"></h2>
+
+    <!-- Question 5: To toggle Active class -->
+    <div class="normal">Click Me to change color.</div>
+
+    <!-- Question 6: Form input Handling -->
+    <form id="myForm">
+        <label for="myInput">Enter your name:</label>
+        <input type="text" id="myInput" required /><br />
+        <input type="submit" />
+    </form>
+
+    <script>
+        // Answer 1: Update inner content 
+        document.getElementById("header").innerText = "Welcome to My Website";
+
+        // Answer 2: Add new p-element inside div
+        let pElement = document.createElement('p');
+        pElement.innerText = "This is a new paragraph";
+        let divElement = document.querySelector(".content");
+        divElement.appendChild(pElement);
+
+        // Answer 3: Change element style
+        document.querySelector(".box").style.backgroundColor = "lightblue";
+
+        // Answer 4: Handle btn click
+        let result = document.getElementById("result");
+        document.getElementById("myButton").addEventListener("click", () => {
+            result.innerText = "Button Clicked!";
+        })
+
+        // Answer 5: To toggle Active class 
+        let activeDiv = document.querySelector(".normal");
+        activeDiv.addEventListener("click", () => {
+            activeDiv.classList.toggle("active");
+        })
+
+        // Answer 6: Form input Handling
+        const formElement = document.getElementById("myForm");
+        document.addEventListener("DOMContentLoaded", () => {
+            formElement.addEventListener("submit", (e) => {
+                event.preventDefault();
+
+                const inputValue = document.getElementById("myInput").value;
+                alert("Hello " + inputValue);
+            });
+        });
+    </script>
+</body>
+
+</html>
